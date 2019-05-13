@@ -1,0 +1,8 @@
+<div [ngStyle]="todo.completed ? {'text-decoration': 'line-through'} : {'color':'green'}">
+  <p>
+    <input (change)="onToggle(todo)" type="checkbox" [checked]="todo.completed" />
+    {{todo.title}}
+    <button (click)="onDelete(todo)">X</button>
+  </p>
+</div>
+<!-- {{todo.completed ? {'text-decoration': 'line-through'} : '{}'}} -->
